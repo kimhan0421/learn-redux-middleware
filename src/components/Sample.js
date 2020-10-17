@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sample =({loadingPost, loadingUsers, post, users}) => {
+const Sample = ({ post, users, loadingPost, loadingUsers }) => {
   return (
     <div>
       <section>
@@ -20,7 +20,7 @@ const Sample =({loadingPost, loadingUsers, post, users}) => {
         {!loadingUsers && users && (
           <ul>
             {users.map(user => (
-              <li key ={user.id} >
+              <li key={user.id}>
                 {user.username} ({user.email})
               </li>
             ))}
@@ -28,7 +28,7 @@ const Sample =({loadingPost, loadingUsers, post, users}) => {
         )}
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default Sample;
